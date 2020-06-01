@@ -10,6 +10,7 @@ among other bundlers.
 #### Contents
 
 - [Install](#install)
+- [Typescript](#typescript)
 - [Usage](#usage)
 - [How](#how)
 - [API](#api)
@@ -28,6 +29,12 @@ with bundlers such as [webpack](https://github.com/webpack/webpack).
 
 ```
 $ npm install update-notifier-webpack
+```
+
+## Typescript
+
+```vue
+$ npm install -D @types/update-notifier-webpack@npm:@types/update-notifier
 ```
 
 ## Usage
