@@ -1,10 +1,11 @@
-# update-notifier [![Build Status](https://travis-ci.org/yeoman/update-notifier.svg?branch=master)](https://travis-ci.org/yeoman/update-notifier)
+#  update-notifier-webpack [![Build Status](https://travis-ci.org/yeoman/update-notifier.svg?branch=master)](https://travis-ci.org/yeoman/update-notifier)
 
-> Update notifications for your CLI app
+> [webpack-compliant](https://github.com/yeoman/update-notifier/issues/123) update notifications for your CLI app
 
 ![](screenshot.png)
 
-Inform users of your package of updates in a non-intrusive way.
+Not limited to but including [webpack](https://github.com/webpack/webpack) support
+among other bundlers.
 
 #### Contents
 
@@ -13,12 +14,20 @@ Inform users of your package of updates in a non-intrusive way.
 - [How](#how)
 - [API](#api)
 - [About](#about)
-- [Users](#users)
+
+## About
+
+It's a fork of [update-notifier](https://github.com/yeoman/update-notifier) that has been created
+due to original package current and future [incompatibility](https://github.com/yeoman/update-notifier/issues/123)
+with bundlers such as [webpack](https://github.com/webpack/webpack).
+
+[Who uses it](https://www.npmjs.org/browse/depended/update-notifier-webpack)
+
 
 ## Install
 
 ```
-$ npm install update-notifier
+$ npm install update-notifier-webpack
 ```
 
 ## Usage
@@ -26,7 +35,7 @@ $ npm install update-notifier
 ### Simple
 
 ```js
-const updateNotifier = require('update-notifier');
+const updateNotifier = require('update-notifier-webpack');
 const pkg = require('./package.json');
 
 updateNotifier({pkg}).notify();
@@ -35,7 +44,7 @@ updateNotifier({pkg}).notify();
 ### Comprehensive
 
 ```js
-const updateNotifier = require('update-notifier');
+const updateNotifier = require('update-notifier-webpack');
 const pkg = require('./package.json');
 
 // Checks for available update and returns an instance
@@ -194,31 +203,4 @@ The check is also skipped automatically:
   - on CI
   - in unit tests (when the `NODE_ENV` environment variable is `test`)
 
-## About
-
-The idea for this module came from the desire to apply the browser update strategy to CLI tools, where everyone is always on the latest version. We first tried automatic updating, which we discovered wasn't popular. This is the second iteration of that idea, but limited to just update notifications.
-
-## Users
-
-There are a bunch projects using it:
-
-- [npm](https://github.com/npm/npm) - Package manager for JavaScript
-- [Yeoman](https://yeoman.io) - Modern workflows for modern webapps
-- [AVA](https://ava.li) - Simple concurrent test runner
-- [XO](https://github.com/xojs/xo) - JavaScript happiness style linter
-- [Pageres](https://github.com/sindresorhus/pageres) - Capture website screenshots
-- [Node GH](https://github.com/node-gh/gh) - GitHub command line tool
-
-[And 2700+ more…](https://www.npmjs.org/browse/depended/update-notifier)
-
 ---
-
-<div align="center">
-	<b>
-		<a href="https://tidelift.com/subscription/pkg/npm-update_notifier?utm_source=npm-update-notifier&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
-	</b>
-	<br>
-	<sub>
-		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
-	</sub>
-</div>

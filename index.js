@@ -2,20 +2,20 @@
 const {spawn} = require('child_process');
 const path = require('path');
 const {format} = require('util');
-const importLazy = require('import-lazy')(require);
+const importLazy = require('import-lazy');
 
-const configstore = importLazy('configstore');
-const chalk = importLazy('chalk');
-const semverDiff = importLazy('semver-diff');
-const latestVersion = importLazy('latest-version');
-const isNpm = importLazy('is-npm');
-const isInstalledGlobally = importLazy('is-installed-globally');
-const isYarnGlobal = importLazy('is-yarn-global');
-const hasYarn = importLazy('has-yarn');
-const boxen = importLazy('boxen');
-const xdgBasedir = importLazy('xdg-basedir');
-const isCi = importLazy('is-ci');
-const pupa = importLazy('pupa');
+const configstore = importLazy(() => require('configstore'))();
+const chalk = importLazy(() => require('chalk'))();
+const semverDiff = importLazy(() => require('semver-diff'))();
+const latestVersion = importLazy(() => require('latest-version'))();
+const isNpm = importLazy(() => require('is-npm'))();
+const isInstalledGlobally = importLazy(() => require('is-installed-globally'))();
+const isYarnGlobal = importLazy(() => require('is-yarn-global'))();
+const hasYarn = importLazy(() => require('has-yarn'))();
+const boxen = importLazy(() => require('boxen'))();
+const xdgBasedir = importLazy(() => require('xdg-basedir'))();
+const isCi = importLazy(() => require('is-ci'))();
+const pupa = importLazy(() => require('pupa'))();
 
 const ONE_DAY = 1000 * 60 * 60 * 24;
 
