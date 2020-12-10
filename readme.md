@@ -210,4 +210,20 @@ The check is also skipped automatically:
   - on CI
   - in unit tests (when the `NODE_ENV` environment variable is `test`)
 
+## About
+
+The idea for this module came from the desire to apply the browser update strategy to CLI tools, where everyone is always on the latest version. We first tried automatic updating, which we discovered wasn't popular. This is the second iteration of that idea, but limited to just update notifications.
+
+## Users
+
+There are a bunch projects using it:
+
+- [npm](https://github.com/npm/npm) - Package manager for JavaScript
+- [Yeoman](https://yeoman.io) - Modern workflows for modern webapps
+- [AVA](https://ava.li) - Simple concurrent test runner
+- [XO](https://github.com/xojs/xo) - JavaScript happiness style linter
+- [Node GH](https://github.com/node-gh/gh) - GitHub command line tool
+
+[And 2700+ more…](https://www.npmjs.org/browse/depended/update-notifier)
+
 ---
